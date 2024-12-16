@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.zg.commoncomposables.ui.composables.ButtonDemo
 import com.zg.commoncomposables.ui.composables.ImageDemo
+import com.zg.commoncomposables.ui.composables.RadioButtonDemo
 import com.zg.commoncomposables.ui.composables.TextDemo
 import com.zg.commoncomposables.ui.theme.CommonComposablesTheme
 
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CommonComposablesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ButtonDemo(modifier = Modifier.padding(innerPadding))
+                    RadioButtonDemo(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
