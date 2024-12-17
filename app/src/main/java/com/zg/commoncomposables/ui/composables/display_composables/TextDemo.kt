@@ -1,4 +1,4 @@
-package com.zg.commoncomposables.ui.composables
+package com.zg.commoncomposables.ui.composables.display_composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column

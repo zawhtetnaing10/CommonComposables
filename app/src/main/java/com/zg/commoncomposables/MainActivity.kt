@@ -7,16 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.zg.commoncomposables.ui.composables.ButtonDemo
-import com.zg.commoncomposables.ui.composables.CheckboxDemo
-import com.zg.commoncomposables.ui.composables.DropdownDemo
-import com.zg.commoncomposables.ui.composables.ImageDemo
-import com.zg.commoncomposables.ui.composables.RadioButtonDemo
-import com.zg.commoncomposables.ui.composables.TextDemo
+import com.zg.commoncomposables.ui.composables.display_composables.DropdownDemo
+import com.zg.commoncomposables.ui.composables.layout_composables.SurfaceDemo
 import com.zg.commoncomposables.ui.theme.CommonComposablesTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CommonComposablesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    DropdownDemo(modifier = Modifier.padding(innerPadding))
+                    SurfaceDemo(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
