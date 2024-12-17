@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.zg.commoncomposables.ui.composables.ButtonDemo
 import com.zg.commoncomposables.ui.composables.CheckboxDemo
+import com.zg.commoncomposables.ui.composables.DropdownDemo
 import com.zg.commoncomposables.ui.composables.ImageDemo
 import com.zg.commoncomposables.ui.composables.RadioButtonDemo
 import com.zg.commoncomposables.ui.composables.TextDemo
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CommonComposablesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    CheckboxDemo(modifier = Modifier.padding(innerPadding))
+                    DropdownDemo(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
