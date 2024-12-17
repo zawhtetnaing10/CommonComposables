@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.zg.commoncomposables.ui.composables.display_composables.DropdownDemo
+import com.zg.commoncomposables.ui.composables.layout_composables.RowDemo
 import com.zg.commoncomposables.ui.composables.layout_composables.SurfaceDemo
 import com.zg.commoncomposables.ui.theme.CommonComposablesTheme
 
@@ -19,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CommonComposablesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SurfaceDemo(modifier = Modifier.padding(innerPadding))
+                    RowDemo(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
