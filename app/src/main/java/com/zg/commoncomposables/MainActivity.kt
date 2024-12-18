@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.zg.commoncomposables.ui.composables.layout_composables.FlowLayoutDemo
+import com.zg.commoncomposables.ui.composables.scrollable_layouts.LazyRowDemo
 import com.zg.commoncomposables.ui.theme.CommonComposablesTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CommonComposablesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    FlowLayoutDemo(modifier = Modifier.padding(innerPadding))
+                    LazyRowDemo(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
