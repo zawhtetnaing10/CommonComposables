@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.zg.commoncomposables.ui.composables.scrollable_layouts.NormalScrollViewDemo
+import com.zg.commoncomposables.ui.composables.nested_scrolls_kinda.LazyColumnWithSectionsDemo
 import com.zg.commoncomposables.ui.theme.CommonComposablesTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CommonComposablesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    NormalScrollViewDemo(modifier = Modifier.padding(innerPadding))
+                    LazyColumnWithSectionsDemo(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
