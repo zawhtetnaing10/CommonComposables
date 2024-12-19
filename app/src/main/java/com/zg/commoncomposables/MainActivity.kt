@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.zg.commoncomposables.ui.composables.nested_scrolls_kinda.LazyColumnWithNestedGridDemo
+import com.zg.commoncomposables.ui.composables.dialogs_demo.AlertDialogDemo
 import com.zg.commoncomposables.ui.theme.CommonComposablesTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CommonComposablesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    LazyColumnWithNestedGridDemo(modifier = Modifier.padding(innerPadding))
+                    AlertDialogDemo(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
