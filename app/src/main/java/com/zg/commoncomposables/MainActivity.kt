@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.zg.commoncomposables.ui.composables.bottom_navigation.BottomNavigationDemo
+import com.zg.commoncomposables.ui.composables.navigation_drawer.NavigationDrawerDemo
 import com.zg.commoncomposables.ui.theme.CommonComposablesTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CommonComposablesTheme {
-                BottomNavigationDemo()
+                NavigationDrawerDemo()
             }
         }
     }
