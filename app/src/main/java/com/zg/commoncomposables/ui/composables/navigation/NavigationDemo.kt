@@ -17,7 +17,7 @@ fun NavigationDemo(navController: NavHostController = rememberNavController(), m
         navController = navController,
         startDestination = NavRoutes.Home,
         modifier = modifier,
-    ){
+    ) {
         // Home
         composable<NavRoutes.Home> {
             HomeScreen(onClickDetails = {
@@ -29,8 +29,35 @@ fun NavigationDemo(navController: NavHostController = rememberNavController(), m
         composable<NavRoutes.Details> { backStackEntry ->
             val args = backStackEntry.toRoute<NavRoutes.Details>()
             val message = args.message
-            DetailsScreen(message, onTapBack = {
+            DetailsScreen(message,
+                onTapBack = {
+                    navController.navigateUp()
+                },
+                onNavigateToSettings = { messageFromDetails ->
+                    navController.navigate(NavRoutes.Settings(messageFromDetails)){
+                        val previousDestinationRoute = navController.previousBackStackEntry?.destination?.route
+                        // inclusive = false, pop details but not home
+                        previousDestinationRoute?.let {
+                            popUpTo(it){inclusive = false}
+                        }
+                    }
+                })
+        }
+
+        composable<NavRoutes.Settings> {  backStackEntry ->
+            val args = backStackEntry.toRoute<NavRoutes.Settings>()
+            val message = args.messageToSettings
+
+            SettingsScreen(message = message, onTapBack = {
+                // If there's nothing in the backstack, navigateUp will relaunch the start destination
                 navController.navigateUp()
+            }, onTapBackToHome = {
+                navController.navigate(NavRoutes.Home){
+                    // Navigate back until start destination which is Home and pop it also
+                    // There will be nothing in the back stack. Then navigate to Home.
+                    // This is the same as pushAndRemoveUntil.
+                    popUpTo(navController.graph.startDestinationId) {inclusive = true}
+                }
             })
         }
     }
@@ -43,7 +70,10 @@ sealed class NavRoutes {
     object Home
 
     @Serializable
-    data class Details(val message : String)
+    data class Details(val message: String)
+
+    @Serializable
+    data class Settings(val messageToSettings: String)
 }
 
 @Preview

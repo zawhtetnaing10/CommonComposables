@@ -14,16 +14,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.zg.commoncomposables.ui.theme.CommonComposablesTheme
 
 @Composable
-fun DetailsScreen(
-    message: String,
-    onTapBack: () -> Unit,
-    onNavigateToSettings: (String) -> Unit,
-    modifier: Modifier = Modifier
-) {
+fun SettingsScreen(message: String, onTapBack: () -> Unit, onTapBackToHome: () -> Unit, modifier: Modifier = Modifier) {
     Scaffold(
         topBar = {
             CommonAppbar(
-                title = "Details Screen",
+                title = "Setting Screen",
                 onTapBack = onTapBack,
                 showNavigationIcon = true
             )
@@ -36,10 +31,8 @@ fun DetailsScreen(
         ) {
             Column {
                 Text(message)
-                Button(onClick = {
-                    onNavigateToSettings("Hey, this is from details")
-                }) {
-                    Text("Navigate to settings screen")
+                Button(onClick = onTapBackToHome) {
+                    Text("Back to Home")
                 }
             }
         }
@@ -48,8 +41,8 @@ fun DetailsScreen(
 
 @Preview
 @Composable
-private fun DetailsScreenDemo() {
+private fun SettingsScreenPreview() {
     CommonComposablesTheme {
-        DetailsScreen("Message from first screen", onTapBack = {}, onNavigateToSettings = {})
+        SettingsScreen("Message", onTapBack = {}, onTapBackToHome = {})
     }
 }
