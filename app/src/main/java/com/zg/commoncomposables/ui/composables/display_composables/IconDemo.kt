@@ -18,7 +18,7 @@ import com.zg.commoncomposables.ui.theme.CommonComposablesTheme
 
 @Composable
 fun IconDemo(modifier: Modifier = Modifier) {
-    Column {
+    Column(modifier = modifier) {
         // Icon
         Icon(
             Icons.Default.Call, contentDescription = "Call Icon",

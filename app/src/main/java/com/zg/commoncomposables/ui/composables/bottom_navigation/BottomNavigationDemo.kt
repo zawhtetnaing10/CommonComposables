@@ -73,6 +73,7 @@ fun BottomNavigationBar(modifier: Modifier = Modifier) {
     }
 }
 
+// Data class for Bottom Navigation Item
 data class BottomNavigationItemData(val title: String, val icon: ImageVector)
 
 @Preview

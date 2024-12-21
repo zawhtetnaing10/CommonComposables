@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 
+// Common Appbar used in all screens.
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CommonAppbar(title: String, onTapBack: () -> Unit, showNavigationIcon: Boolean, modifier: Modifier = Modifier) {

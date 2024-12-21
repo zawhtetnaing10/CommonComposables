@@ -44,6 +44,7 @@ fun NavigationDemo(navController: NavHostController = rememberNavController(), m
                 })
         }
 
+        // Settings
         composable<NavRoutes.Settings> {  backStackEntry ->
             val args = backStackEntry.toRoute<NavRoutes.Settings>()
             val message = args.messageToSettings
@@ -64,6 +65,7 @@ fun NavigationDemo(navController: NavHostController = rememberNavController(), m
 }
 
 // Navigation Routes
+// Must be serializable
 @Serializable
 sealed class NavRoutes {
     @Serializable

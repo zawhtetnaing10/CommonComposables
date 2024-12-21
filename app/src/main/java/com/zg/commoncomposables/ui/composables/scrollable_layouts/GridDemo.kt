@@ -1,7 +1,5 @@
 package com.zg.commoncomposables.ui.composables.scrollable_layouts
 
-import android.view.RoundedCorner
-import android.view.Surface
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
